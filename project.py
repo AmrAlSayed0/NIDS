@@ -36,7 +36,7 @@ df = pd.read_csv ( 'corrected',names=features )
 
 
 
-# Inspect the data type of each feature. Maybe convert them to more appropriate 
+# Inspect the data type of each feature. Maybe convert them to more appropriate
 # data type later.
 num_of_data_points = df.shape [ 0 ]
 num_of_features = df.shape [ 1 ]
@@ -150,7 +150,7 @@ df [ 'target' ] = df [ 'target' ].astype ( 'int' )
 
 X_train,X_test,y_train,y_test = train_test_split(x_numerical_selected,y,test_size=0.2,random_state=1)
 
-#%% 
+#%%
 # KNN Algorithm
 print("KNN Algorithm")
 Le = LabelEncoder()
@@ -166,7 +166,7 @@ knn.fit(X_train,y_train)
 prediction = knn.predict(X_test)
 accuracy = metrics.accuracy_score(y_test, prediction)
 print("Predictions",prediction)
-print("Acuracy",accuracy)
+print("Accuracy",accuracy)
 
 #%% random forest
 X_train,X_test,y_train,y_test = train_test_split(x_numerical_selected,y,test_size=0.2,random_state=1)
@@ -182,4 +182,4 @@ classifier.fit(X_train,y_train)
 y_predict = classifier.predict(X_test)
 accuracy = metrics.accuracy_score(y_test, y_predict)
 print("Predictions",prediction)
-print("Acuracy",accuracy)
+print("Accuracy",accuracy)
